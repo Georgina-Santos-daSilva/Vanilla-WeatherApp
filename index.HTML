@@ -15,38 +15,46 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <h1>Madrid</h1>
-        <ul>
-          <li>Saturday 14:15</li>
-          <li>Clear</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-              alt="Clear"
-            />
-            24°C |°F
-          </div>
-          <div class="col-6">
-            <ul>
-              <li>Precipitation: 4%</li>
-              <li>Humidity: 39%</li>
-              <li>Wind: 11km/h</li>
-            </ul>
-          </div>
+      <div class="weather-app-wrapper">
+        <div class="weather-class">
+          <div class="overview">
+          <h1>Madrid</h1>
+          <ul>
+            <li>Saturday 14:15</li>
+            <li>Clear</li>
+          </ul>
         </div>
-        <small>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  alt="Clear" class="float-left"
+                /><div class="float-left">
+                24°C |°F</div>
+                </div>
+              </div>
+            
+            <div class="col-6">
+              <ul>
+                <li>Precipitation: 4%</li>
+                <li>Humidity: 39%</li>
+                <li>Wind: 11km/h</li>
+              </ul>
+              
+            </div>
+            
+          </div>
+        
+        </div>   <small>
           <a
-            href="https://github.com/Georgina-Santos-daSilva/Vanilla-WeatherApp"
-            >Oper-source code</a
-          >
+            href="https://github.com/Georgina-Santos-daSilva/Vanilla-WeatherApp">Open-source code</a>
           created by Georgina Santos
         </small>
+    
       </div>
-
-      <a href="" class="btn btn-primary">Click me</a>
+       
+      </div>
     </div>
     <script src="src/index.js"></script>
   </body>
