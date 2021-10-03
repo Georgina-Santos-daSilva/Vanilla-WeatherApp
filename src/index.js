@@ -30,6 +30,7 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   let humidityElement = document.querySelector("#humidity");
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
 
   teperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
@@ -38,9 +39,14 @@ function displayTemperature(response) {
   windElement.innerHTML = response.data.wind.speed;
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 let apiKey = "c4db4a0bb29288a24feb8d1fd9d4368e";
+
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Madrid&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
