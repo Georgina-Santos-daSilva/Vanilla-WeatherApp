@@ -22,6 +22,40 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `
+            <div class="col-2"> 
+             <ul>
+                <li> 
+                  <div class="weather-forecast-date">
+                     Friday
+                    </div>
+                  </li>
+          
+              <li>
+                <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="" width="42"/>
+              </li>
+              <li> 
+                <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-temperature-max">
+                  18°C
+                </span> 
+                <span class="weather-forecast-temperature-min">
+                12°C</span>
+              </div>
+              </li>
+            </ul>
+            
+          </div>`;
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   let teperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -63,4 +97,4 @@ search("Tokyo");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-//let city = "Berlin";
+displayForecast();
