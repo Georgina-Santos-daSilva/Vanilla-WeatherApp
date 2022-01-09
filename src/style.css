@@ -87,3 +87,8 @@ li::first-letter {
 .weather-temperature .active:hover {
   text-decoration: none;
 }
+
+@media (max-width: 900px){
+  .btn{
+    font-size:10px;}
+}
